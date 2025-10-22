@@ -1,6 +1,6 @@
-# 🧮 Solution Explanation — *The Archmage’s Layered Spellbook*
+# Solution Explanation — *The Archmage’s Layered Spellbook*
 
-## 1. 🧩 Restating the Problem
+## 1. Restating the Problem
 We are given:
 - An array `a[1..n]`.
 - `q` operations of two types:
@@ -16,7 +16,7 @@ After each operation, we must print the total energy of all crystals, considerin
 
 ---
 
-## 2. ⚙️ Key Observations
+## 2. Key Observations
 1. **Top layer dominance:**  
    For each position `i`, only the maximum active layer ID matters for `x` and `p`.
 
@@ -30,7 +30,7 @@ After each operation, we must print the total energy of all crystals, considerin
 
 ---
 
-## 3. 🧠 Efficient Approach Overview
+## 3. Efficient Approach Overview
 We solve the problem **offline**:
 
 1. **Timeline segmentation:**
@@ -54,7 +54,7 @@ We solve the problem **offline**:
 
 ---
 
-## 4. 🪄 Step-by-Step Algorithm
+## 4. Step-by-Step Algorithm
 
 ### Step 1. Preprocessing
 - Parse all `q` queries.
@@ -81,7 +81,7 @@ After processing all queries in timeline order, print the global total after eac
 
 ---
 
-## 5. ⏱️ Complexity Analysis
+## 5. Complexity Analysis
 
 | Aspect | Cost |
 |--------|------|
@@ -95,7 +95,7 @@ This fits comfortably within a **2-second / 256 MB** limit for `n, q ≤ 2e5`.
 
 ---
 
-## 6. 🧩 Why Naive / AI Solutions Fail
+## 6. Why Naive / AI Solutions Fail
 1. **Ignoring parity:** Many solvers assume the top layer alone decides +/−.  
    → Fails when hidden layers alter parity count.
 
@@ -107,7 +107,7 @@ This fits comfortably within a **2-second / 256 MB** limit for `n, q ≤ 2e5`.
 
 ---
 
-## 7. 🏁 Implementation Outline (Python)
+## 7. Implementation Outline (Python)
 
 Below is a full skeleton that:
 1) parses input,  
@@ -279,7 +279,7 @@ def solve():
 
 if __name__ == "__main__":
     solve()
-## 8. ✅ Correctness Proof (Sketch)
+## 8. Correctness Proof (Sketch)
 
 - **Induction over time:**  
   Every operation either adds or removes exactly one layer range.  
@@ -298,7 +298,7 @@ if __name__ == "__main__":
 
 ---
 
-## 9. 🧪 Implementation Hints
+## 9. Implementation Hints
 
 - Use **fast I/O** (`sys.stdin.buffer.readline`, `sys.stdout.write`) for large input sizes.  
 - Maintain a **rollback stack** — push a record *before* overwriting any variable.
@@ -316,7 +316,7 @@ if __name__ == "__main__":
 
 ---
 
-## 10. 🧾 Summary
+## 10. Summary
 
 | Feature | Technique |
 |----------|------------|
@@ -327,5 +327,4 @@ if __name__ == "__main__":
 | Complexity | **O((n + q) log n)** |
 | Memory usage | **O(n log n)** |
 
-This combination of **segment tree**, **rollback mechanism**, and **time-division processing** allows efficient management of layer-based range updates and undo operations.  
-It is both **time-optimal** and **conceptually clean**, suitable for a **Div1/Div2-level** Codeforces problem.
+
