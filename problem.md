@@ -33,6 +33,7 @@ For a crystal with top layer `(k, p, x)`:
 
 ## Input Format
 n q
+
 a1 a2 ... an
 
 Followed by `q` lines of operations, each either:
