@@ -8,7 +8,8 @@ Deep in the Tower of Mirrors, the Archmage maintains a magic array of energy cry
 
 ### 1. Energy Spell
 l r k p x
-# where:
+
+where:
 - `[l, r]` - range of crystals affected
 - `k` - layer ID of the spell
 - `p` - parity mode (0 for even, 1 for odd)
@@ -17,7 +18,7 @@ l r k p x
 ### 2. Undo Spell
 t
 
-# Rewinds the entire spellbook back to the exact state after spell `t` was cast, erasing all later spells.
+Rewinds the entire spellbook back to the exact state after spell `t` was cast, erasing all later spells.
 
 ## Spell Mechanics
 
