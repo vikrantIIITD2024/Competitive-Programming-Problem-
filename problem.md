@@ -34,7 +34,7 @@ For a crystal with top layer `(k, p, x)`:
 n q
 a1 a2 ... an
 
-# Followed by `q` lines of operations, each either:
+Followed by `q` lines of operations, each either:
 - `+ l r k p x`
 - `- t`
 
@@ -59,4 +59,19 @@ After each operation, print the sum of all crystals' current energies.
 0
 
 
+**Output:**
+
+15
+18
+15
+24
+11
+
+
+## Note
+
+1. "UNDO 0" means reverting to the initial state (no spells active)
+2. Multiple layers can overlap; only the highest k layer on each crystal determines its visible effect
+3. The parity check (even vs odd) depends on all currently active layers, not just the top one
+4. Time rewinds may cause new histories to branch
 
