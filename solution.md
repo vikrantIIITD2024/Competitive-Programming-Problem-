@@ -117,7 +117,7 @@ Below is a full skeleton that:
 
 > Note: The `SegTree` internals here are *scaffold/stubs* — fill in the parity + top-layer dominance logic exactly as described in Sections 3–6.
 
-```python
+<pre> ```python
 import sys
 sys.setrecursionlimit(1_000_000)
 input = sys.stdin.buffer.readline
@@ -278,7 +278,7 @@ def solve():
     sys.stdout.write("\n".join(out))
 
 if __name__ == "__main__":
-    solve()
+    solve() ```</pre>
 ## 8. Correctness Proof (Sketch)
 
 - **Induction over time:**  
@@ -326,5 +326,6 @@ if __name__ == "__main__":
 | Time traversal | Divide & Conquer on time |
 | Complexity | **O((n + q) log n)** |
 | Memory usage | **O(n log n)** |
+
 
 
